@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/lanmess.egg-info/PKG-INFO
+src/lanmess.egg-info/SOURCES.txt
+src/lanmess.egg-info/dependency_links.txt
+src/lanmess.egg-info/entry_points.txt
+src/lanmess.egg-info/requires.txt
+src/lanmess.egg-info/top_level.txt
+src/lanmess_files/__init__.py
+src/lanmess_files/config.py
+src/lanmess_files/crypto.py
+src/lanmess_files/database.py
+src/lanmess_files/discovery.py
+src/lanmess_files/main.py
+src/lanmess_files/network.py
+src/lanmess_files/tui.py

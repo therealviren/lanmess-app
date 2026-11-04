@@ -1,0 +1,32 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+export PREFIX="/data/data/com.termux/files/usr"
+export HOME="/data/data/com.termux/files/home"
+export PATH="$PREFIX/bin:$PATH"
+
+cd "$HOME"
+
+if ! command -v python &> /dev/null; then
+    pkg update -y && pkg install -y python git
+fi
+
+PROJECT_DIR="$HOME/lanmess"
+ASSETS_DIR="/data/data/com.termux/files/usr/share/lanmess"
+
+if [ ! -d "$PROJECT_DIR" ]; then
+    mkdir -p "$PROJECT_DIR"
+    if [ -d "$ASSETS_DIR" ]; then
+        cp -r "$ASSETS_DIR"/* "$PROJECT_DIR/"
+    fi
+fi
+
+cd "$PROJECT_DIR"
+pip install --no-cache-dir .
+
+if command -v lanmess &> /dev/null; then
+    clear
+    lanmess
+else
+    exec bash
+fi
+                                    

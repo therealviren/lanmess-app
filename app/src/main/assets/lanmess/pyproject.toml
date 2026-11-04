@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lanmess"
+version = "1.1.1"
+description = "LAN-only end-to-end encrypted messenger with a TUI"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+
+dependencies = [
+    "textual>=0.52.0",
+    "cryptography>=41.0.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Communications :: Chat",
+]
+
+[project.scripts]
+lanmess = "lanmess_files.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

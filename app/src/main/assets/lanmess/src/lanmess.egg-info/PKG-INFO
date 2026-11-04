@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: lanmess
+Version: 1.1.1
+Summary: LAN-only end-to-end encrypted messenger with a TUI
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Classifier: Topic :: Communications :: Chat
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: textual>=0.52.0
+Requires-Dist: cryptography>=41.0.0
+Dynamic: license-file
+
+# LANMess
+
+LAN-only end-to-end encrypted messenger with a terminal UI.
+
+## Install
+
+pip install lanmess
+
+## Run
+
+lanmess
