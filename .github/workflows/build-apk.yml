@@ -19,9 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Configure Android SDK
-        run: |
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          build-tools-version: 34.0.0
+          sdk-version: 34
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew || true
