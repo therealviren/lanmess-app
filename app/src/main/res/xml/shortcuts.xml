@@ -3,9 +3,9 @@
 
     <!--
         For shortcut.xml:
-        If applicationId in build.gradle is changed from "com.termux", then targetPackage will
+        If applicationId in build.gradle is changed from "com.viren.lanmess", then targetPackage will
         need to be manually patched since ${applicationId} variable or resource string does not work.
-        If package name in AndroidManifest is changed from "com.termux", then targetClass will
+        If package name in AndroidManifest is changed from "com.viren.lanmess", then targetClass will
         need to be manually patched since dot (.) prefix does not work to automatically prefix the
         package name.
     -->
@@ -19,7 +19,7 @@
         <intent
             android:action="android.intent.action.RUN"
             android:targetPackage="com.viren.lanmess"
-            android:targetClass="com.termux.app.TermuxActivity"
+            android:targetClass="com.viren.lanmess.app.TermuxActivity"
             android:name="android.shortcut.conversation"/>
     </shortcut>
 
@@ -32,9 +32,9 @@
         <intent
             android:action="android.intent.action.RUN"
             android:targetPackage="com.viren.lanmess"
-            android:targetClass="com.termux.app.TermuxActivity"
+            android:targetClass="com.viren.lanmess.app.TermuxActivity"
             android:name="android.shortcut.conversation">
-            <extra android:name="com.termux.app.failsafe_session" android:value="true"/>
+            <extra android:name="com.viren.lanmess.app.failsafe_session" android:value="true"/>
         </intent>
     </shortcut>
 
@@ -47,7 +47,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.viren.lanmess"
-            android:targetClass="com.termux.app.activities.SettingsActivity"
+            android:targetClass="com.viren.lanmess.app.activities.SettingsActivity"
             android:name="android.shortcut.conversation"/>
     </shortcut>
 
