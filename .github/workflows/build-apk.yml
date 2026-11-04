@@ -25,6 +25,16 @@ jobs:
           packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
           accept-android-sdk-licenses: true
 
+      - name: Remove hardcoded local AAPT2 override
+        run: |
+          if [ -f gradle.properties ]; then
+            sed -i '/aapt2FromMavenOverride/d' gradle.properties
+            echo "Successfully removed local aapt2 override from gradle.properties"
+          fi
+          if [ -f android/gradle.properties ]; then
+            sed -i '/aapt2FromMavenOverride/d' android/gradle.properties
+          fi
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew || true
 
